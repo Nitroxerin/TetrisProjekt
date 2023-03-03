@@ -1,0 +1,60 @@
+* {
+  font-family: 'Press Start 2P', cursive;
+}
+ 
+.grid {
+  display: grid;
+  grid-template-columns: 320px 200px;
+  position:absolute;
+  left:50%;
+  transform: translate(-50%, 0);
+  background-color: rgb(118,146,170); /* Spielfeld ausgeschnitten*/
+  border-radius: 18px; /* Spielfeld ausgeschnitten*/
+  padding:2%; /* Spielfeld ausgeschnitten*/
+}
+
+.next {
+  border: solid 2px;
+}
+ 
+.right-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+ 
+.game-board {
+  border: solid 4px;
+}
+ 
+.game-button {
+  background-color: #4caf50;
+  font-size: 16px;
+  padding: 15px 30px;
+  cursor: pointer;
+}
+
+.legende {
+  display: grid;
+  height: 30%;
+  width: 20%; 
+  background-color: #6e82f3;
+  border-radius: 18px;
+}
+.scoreboard {
+  display: grid;
+  height: 30%;
+  width: 20%; 
+  background-color: #6e82f3;
+  border-radius: 18px;
+  float: right;
+  position: relative;
+  top: -260;
+  
+  }
+body{
+  background: url(tetris-wallpaper.jpg); /* Bild von Tetris eingefügt*/
+  background-attachment: fixed; 
+  background-size: cover; /* Bild passt die Größe der Auflösung an*/
+  
+}

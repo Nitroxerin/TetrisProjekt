@@ -1,0 +1,73 @@
+<html lang="de">
+  <head>
+    <title>Tetris</title>
+    <meta charset="utf-8">
+    <link href="styles.css" rel="stylesheet"/>
+    <link 
+    href="https://fonts.googleapis.com/css?family=Press+Start+2P" 
+    rel="stylesheet"
+    />
+  </head>
+
+  <body>
+
+    <div class="grid">
+      <canvas id="board" class="game-board"></canvas> <!-- --> 
+      <div class="right-column">
+        <div>
+          <h1>TETRIS</h1>
+          <p>Score: <span id="score">0</span></p>
+          <p>Lines: <span id="lines">0</span></p>
+          <p>Level: <span id="level">1</span></p>
+          <p id="nextBlock">Next Block:</p>
+          <canvas id="next" class="next"></canvas>
+        </div>
+        <button onclick="restart()" id="restart-button" class="game-button">Restart</button>
+        <button onclick="pause()" id="pause-button" class="game-button">Pause</button>
+        <button onclick="play()" id="play-button" class="game-button">Play</button>
+      </div>
+    </div>
+    <div id="legende" class="legende">
+      <table> <!-- Erstellen einer Tabelle für das die Legende --> 
+        <caption>Legende</caption> <!-- Überschrift Legende --> 
+        <tr>
+          <td>↑</td><td>-></td><td>Rotate Block</td>
+        </tr>
+        <tr>
+          <td>→</td><td>-></td><td>Move Right</td>
+        </tr>
+        <tr>
+          <td>←</td><td>-></td><td>Move Left</td>
+        </tr>
+        <tr>
+          <td>↓</td><td>-></td><td>Move Down</td>
+        </tr>
+        <tr>
+          <td>Space</td><td>-></td><td>Hard Drop</td>
+        </tr>
+        <tr>
+          <td>'p'</td><td>-></td><td>Pause</td>
+        </tr>
+      </table>
+    </div>
+    <div id="scoreboard" class="scoreboard"> <!-- Erstellen einer Tabelle für das Scoreboard --> 
+      <table>
+        <caption>Scoreboard</caption> <!-- Überschrift Scoreboard --> 
+        <tr>
+          <td>last</td><td>-></td><td><span id="last">0</span></td> <!-- Zeile für Letzter Score --> 
+        </tr>
+        <tr>
+          <td>worst</td><td>-></td><td><span id="worst">0</span></td> <!-- Zeile für schlechtester Score --> 
+        </tr>
+        <tr>
+          <td>best</td><td>-></td><td><span id="best">0</span></td> <!-- Zeile für den besten Score --> 
+        </tr>
+      </table>
+    </div>
+    <script type="text/javascript" src="constants.js"></script>
+    <script type="text/javascript" src="board.js"></script>
+    <script type="text/javascript" src="piece.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+
+  </body>
+</html>
